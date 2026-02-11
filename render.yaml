@@ -1,0 +1,56 @@
+services:
+  - type: web
+    name: magic-learn-backend
+    runtime: python
+    repo: https://github.com/Anoop1925/PadhaKU
+    branch: main
+    rootDir: Eduverse/src/app/feature-1
+    buildCommand: pip install -r requirements.txt
+    startCommand: python magic_learn_backend.py
+    plan: free
+    region: oregon
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10.3"
+      - key: DRAWINAIR_API_KEY
+        sync: false
+      - key: DRAWINAIR_API_KEY_2
+        sync: false
+      - key: DRAWINAIR_API_KEY_3
+        sync: false
+      - key: DRAWINAIR_API_KEY_4
+        sync: false
+      - key: DRAWINAIR_API_KEY_5
+        sync: false
+      - key: DRAWINAIR_API_KEY_6
+        sync: false
+      - key: IMAGE_READER_API_KEY
+        sync: false
+      - key: IMAGE_READER_API_KEY_2
+        sync: false
+      - key: IMAGE_READER_API_KEY_3
+        sync: false
+      - key: PLOT_CRAFTER_API_KEY
+        sync: false
+      - key: PLOT_CRAFTER_API_KEY_2
+        sync: false
+      - key: PLOT_CRAFTER_API_KEY_3
+        sync: false
+
+  - type: web
+    name: playground-backend
+    runtime: python
+    repo: https://github.com/Anoop1925/PadhaKU
+    branch: main
+    rootDir: Eduverse/src/app/feature-4
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    plan: free
+    region: oregon
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10.3"
+      - key: PLAYGROUND_API_KEY
+        sync: false
+      - key: YOUTUBE_DATA_API_KEY
+        sync: false

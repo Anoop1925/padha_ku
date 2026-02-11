@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: magic-learn-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python magic_learn_backend.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.3
+      - key: DRAWINAIR_API_KEY
+        sync: false
+      - key: DRAWINAIR_API_KEY_2
+        sync: false
+      - key: DRAWINAIR_API_KEY_3
+        sync: false
+      - key: DRAWINAIR_API_KEY_4
+        sync: false
+      - key: DRAWINAIR_API_KEY_5
+        sync: false
+      - key: DRAWINAIR_API_KEY_6
+        sync: false
+      - key: IMAGE_READER_API_KEY
+        sync: false
+      - key: IMAGE_READER_API_KEY_2
+        sync: false
+      - key: IMAGE_READER_API_KEY_3
+        sync: false
+      - key: PLOT_CRAFTER_API_KEY
+        sync: false
+      - key: PLOT_CRAFTER_API_KEY_2
+        sync: false
+      - key: PLOT_CRAFTER_API_KEY_3
+        sync: false
+    plan: free
